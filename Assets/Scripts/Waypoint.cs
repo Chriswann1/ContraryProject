@@ -23,6 +23,8 @@ public class Waypoint : MonoBehaviour
         if (!ispassed)
         {
             GameplayManager.Instance.lastwaypoint = gameObject.transform.position;
+            ispassed = true;
+            gameObject.SetActive(false);
         }
     }
 }
