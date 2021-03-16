@@ -12199,6 +12199,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4601755080657679123, guid: 9ebeeda8e9743ca45ad1e02585823d5b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 15601774}
+    - target: {fileID: 4601755080657679123, guid: 9ebeeda8e9743ca45ad1e02585823d5b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnclickPlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601755080720554372, guid: 9ebeeda8e9743ca45ad1e02585823d5b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 15601774}
+    - target: {fileID: 4601755080720554372, guid: 9ebeeda8e9743ca45ad1e02585823d5b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601755080720554372, guid: 9ebeeda8e9743ca45ad1e02585823d5b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601755080720554372, guid: 9ebeeda8e9743ca45ad1e02585823d5b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 7830298223067169686, guid: 9ebeeda8e9743ca45ad1e02585823d5b,
         type: 3}
       propertyPath: m_LocalPosition.x
