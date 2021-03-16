@@ -12,6 +12,7 @@ public class QTE_Script : MonoBehaviour
     private int index = 0;
     [SerializeField]private KeyCode[] thisKey;
     [SerializeField]private Image[] pictures;
+    [SerializeField]private Sprite[] sprites;
     public GameObject qteUI;
     
     public TextMeshProUGUI timeTxt;
@@ -45,6 +46,7 @@ public class QTE_Script : MonoBehaviour
         {
             for (int i = 0; i < pictures.Length; i++)
             {
+                pictures[i].sprite = sprites[i];
                 pictures[i].gameObject.SetActive(true);
                 qteDelay = Time.time + maxTime;
             }
@@ -64,15 +66,17 @@ public class QTE_Script : MonoBehaviour
                 Debug.Log("BadKey");
                 pictures[index].color = Color.red;
                 qteUsed = true;
-                Invoke("disableUI", 2f);
+                Invoke("disableUI", 0.4f);
                 
-                Invoke("GameplayManager.Instance.GameOver",2.1f);
+                Invoke("GameplayManager.Instance.GameOver",0.5f);
+                this.enabled = false;
             }
         }
         else
         {
             qteUsed = true;
             Invoke("disableUI", 0.5f);
+            this.enabled = false;
         }
     }
 
