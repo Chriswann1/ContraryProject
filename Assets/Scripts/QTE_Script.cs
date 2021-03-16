@@ -1,96 +1,94 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class QTE_Script : MonoBehaviour
 {
     #region variables
-    [SerializeField] private KeyCode inputedKey;
-    [SerializeField] private KeyCode[] thisKey;
-    private AudioClip thisAudio;
-    public GameObject displayImgTouch;
-    public Text inputTxt;
+
+    private int index = 0;
+    [SerializeField]private KeyCode[] thisKey;
+    [SerializeField]private Image[] pictures;
+    public GameObject qteUI;
+    
+    public TextMeshProUGUI timeTxt;
     
     private bool goodKey;
-
-    #region  ImgVariables
-    
-    [SerializeField]private Image imgZ;
-    [SerializeField]private Image imgQ;
-    [SerializeField]private Image imgS;
-    [SerializeField]private Image imgD;
-    [SerializeField]private Image imgA;
-    [SerializeField]private Image imgE;
-    #endregion
-
-    public float maxTime = 4f; 
+    [SerializeField]private float maxTime; 
     private float qteDelay;
+    private bool enableQte = true;
+    private bool imgSpawned = false;
 
+    [SerializeField]private bool qteUsed;
+ 
     #endregion
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        qteDelay = maxTime;
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if (qteDelay >= 0)
+        if (qteDelay-Time.time > 0)
         {
-            maxTime -= Time.deltaTime;
+            timeTxt.text = (qteDelay-Time.time).ToString("n2");
         }
-        if (qteDelay <= 0 && inputedKey == null)
+        if (enableQte && !qteUsed)
         {
-            //imgRed
+            QTe();
         }
-        else if (qteDelay >= 0 && goodKey == false)
+    }
+
+    void QTe()
+    {
+        if (!imgSpawned)
         {
-            //imgRed
-        }
-        else if (qteDelay >= 0 && goodKey == true)
-        {
-            //imgGreen
-        }
-        
-        for (int i = 0; i <= thisKey.Length; i++)
-        {
-            if (thisKey[i] == inputedKey)
+            for (int i = 0; i < pictures.Length; i++)
             {
-                goodKey = true;
+                pictures[i].gameObject.SetActive(true);
+                qteDelay = Time.time + maxTime;
             }
-            else if (thisKey[i] != inputedKey)
+            qteUI.SetActive(true);
+            imgSpawned = true;
+        }
+
+        if (index<pictures.Length)
+        {
+            if (Input.GetKeyDown(thisKey[index]))
             {
-                goodKey = false;
+                pictures[index].color = Color.green;
+                index++;
+                //qteDelay = Time.time + maxTime;
+            }
+            else if (Input.anyKeyDown && !Input.GetKeyDown(thisKey[index]) || Time.time>qteDelay){
+                Debug.Log("BadKey");
+                pictures[index].color = Color.red;
+                qteUsed = true;
+                Invoke("disableUI", 2f);
+                
+                Invoke("GameplayManager.Instance.GameOver",2.1f);
             }
         }
-        
-        if (Input.GetKey(KeyCode.Z))
+        else
         {
-            print(imgZ);
+            qteUsed = true;
+            Invoke("disableUI", 0.5f);
         }
-        if (Input.GetKey(KeyCode.Q))
+    }
+
+    void disableUI()
+    {
+        for (int i = 0; i < pictures.Length; i++)
         {
-            print(imgQ);
+            pictures[i].gameObject.SetActive(true);
+            qteDelay = Time.time + maxTime;
         }
-        if (Input.GetKey(KeyCode.S))
-        {
-            print(imgS);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            print(imgD);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            print(imgA);
-        }
-        if (Input.GetKey(KeyCode.E))
-        {
-            print(imgE);
-        }
+        qteUI.SetActive(false);
+        imgSpawned = false;
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        enableQte = true;
     }
 }

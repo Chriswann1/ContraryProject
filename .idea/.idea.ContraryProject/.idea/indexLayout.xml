@@ -3,6 +3,7 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes />
+<<<<<<< HEAD
     <explicitExcludes>
       <Path>.git</Path>
       <Path>.idea</Path>
@@ -10,5 +11,8 @@
       <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
+=======
+    <explicitExcludes />
+>>>>>>> main
   </component>
 </project>
