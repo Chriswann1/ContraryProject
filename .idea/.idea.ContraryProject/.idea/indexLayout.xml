@@ -24,6 +24,10 @@
       <Path>.git</Path>
       <Path>.idea</Path>
       <Path>Library</Path>
+<<<<<<< HEAD
+=======
+      <Path>Logs</Path>
+>>>>>>> main
       <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
