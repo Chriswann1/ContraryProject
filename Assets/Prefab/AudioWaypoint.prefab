@@ -168,3 +168,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 6824527025178991753}
+  timer: 3
+  txtCoq: Test
