@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         #region Move
-        Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         
         transform.Translate(input.normalized * Time.deltaTime * speed,0f);
         
