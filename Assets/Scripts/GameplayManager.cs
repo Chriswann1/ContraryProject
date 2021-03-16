@@ -9,13 +9,13 @@ public class GameplayManager : MonoBehaviour
 {
     public static GameplayManager Instance;
     public Vector2 lastwaypoint;
-
-
-    [SerializeField] private GameObject gameover;
+    
+    [SerializeField] private GameObject canvasPause;
+    [SerializeField] private GameObject canvasGameOver;
     public Grid grid;
     [SerializeField] private GameObject player;
 
-    [SerializeField] private GameObject canvasPause;
+    
     
 
     
@@ -44,47 +44,43 @@ public class GameplayManager : MonoBehaviour
 
         if (Input.GetButtonDown("Cancel"))
         {
-            canvasPause.SetActive(true);
-            Time.timeScale = 0;
-            
+            Pause();
         }
     }
 
     public void GameOver()
     {
-        gameover.SetActive(true);
+        canvasGameOver.SetActive(true);
+        Cursor.visible = true;
         Time.timeScale = 0;
     }
-
+    public void Pause()
+    {
+        canvasPause.SetActive(true);
+        Cursor.visible = true;
+        Time.timeScale = 0;
+    }
     public void Retry()
     {
         player.transform.position = lastwaypoint;
-        gameover.SetActive(false);
+        canvasGameOver.SetActive(false);
         Time.timeScale = 1;
+        Cursor.visible = false;
     }
-
     public void LoadLevel(string levelname)
     {
         SceneManager.LoadScene(levelname);
         Time.timeScale = 1;
     }
-
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
-    
     public void OnclickPlay()
     {
         canvasPause.SetActive(false);
         Cursor.visible = true;
         Time.timeScale = 1;
-    }
-
-    public void OnclickMenu()
-    {
-        Cursor.visible = true;
-        Time.timeScale = 1;
-        SceneManager.LoadScene(0);
     }
 }
