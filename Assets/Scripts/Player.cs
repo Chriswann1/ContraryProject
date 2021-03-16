@@ -21,12 +21,7 @@ public class Player : MonoBehaviour
         
         transform.Translate(input.normalized * Time.deltaTime * speed,0f);
         
-<<<<<<< HEAD
         if (input.x >= 1 && Time.timeScale != 0)
-=======
-        
-        if (input.x >= 1)
->>>>>>> main
         { chickenrotate.transform.rotation = Quaternion.Euler(0,0,-90); }
         if (input.x <= -1 && Time.timeScale != 0)
         { chickenrotate.transform.rotation = Quaternion.Euler(0,0,90); }
