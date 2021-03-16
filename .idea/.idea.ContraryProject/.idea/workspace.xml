@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="665e5567-c480-4f61-aa69-16784b1fbd95" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/INDEV/Oscar.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/INDEV/Oscar.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/INDEV/Erwann.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/INDEV/Erwann.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/INDEV/Romain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/INDEV/Romain.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameplayManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameplayManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +20,9 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameplayManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1pnLZGfgGF4LyNst50zaDRnxtaM" />
@@ -65,6 +69,8 @@
       <workItem from="1615822948564" duration="595000" />
       <workItem from="1615881626339" duration="452000" />
       <workItem from="1615884274041" duration="110000" />
+      <workItem from="1615884631332" duration="691000" />
+      <workItem from="1615896832145" duration="3049000" />
     </task>
     <servers />
   </component>

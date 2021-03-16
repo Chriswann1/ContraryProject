@@ -33,7 +33,7 @@ public class GameplayManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             GameOver();
         }
@@ -42,16 +42,24 @@ public class GameplayManager : MonoBehaviour
     public void GameOver()
     {
         gameover.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void Retry()
     {
         player.transform.position = lastwaypoint;
         gameover.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void LoadLevel(string levelname)
     {
         SceneManager.LoadScene(levelname);
+        Time.timeScale = 1;
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

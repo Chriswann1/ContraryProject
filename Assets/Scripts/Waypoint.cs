@@ -20,7 +20,7 @@ public class Waypoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!ispassed)
+        if (!ispassed && other.CompareTag("Chicken"))
         {
             GameplayManager.Instance.lastwaypoint = gameObject.transform.position;
             ispassed = true;
