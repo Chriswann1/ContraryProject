@@ -4,12 +4,21 @@
     <list default="true" id="665e5567-c480-4f61-aa69-16784b1fbd95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Chicken.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Chicken.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Patrol1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Patrol1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/INDEV/Oscar.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/INDEV/Oscar.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/INDEV/Romain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/INDEV/Romain.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameplayManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameplayManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+=======
+<<<<<<< Updated upstream
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/INDEV/Oscar.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/INDEV/Oscar.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QTE_Script.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/QTE_Script.cs" afterDir="false" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +84,15 @@
       <workItem from="1615813988324" duration="5710000" />
       <workItem from="1615822948564" duration="595000" />
       <workItem from="1615881626339" duration="452000" />
+<<<<<<< Updated upstream
       <workItem from="1615884274041" duration="110000" />
+<<<<<<< Updated upstream
       <workItem from="1615884812890" duration="2446000" />
+=======
+=======
+      <workItem from="1615882347761" duration="1615000" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
