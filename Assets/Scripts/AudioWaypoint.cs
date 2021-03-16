@@ -6,6 +6,7 @@ public class AudioWaypoint : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
     bool visited;
+    [SerializeField] string txtCoq;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,15 @@ public class AudioWaypoint : MonoBehaviour
         {
             audioSource.Play();
             visited = true;
+            TestScriptRomain.Instance.txtDialogueCoq.text = txtCoq;
+            StartCoroutine("Dialogue");
         }
+    }
+
+    IEnumerator Dialogue()
+    {
+        TestScriptRomain.Instance.dialogueCoq.SetActive(true);
+        yield return new WaitForSeconds(audioSource.time);
+        TestScriptRomain.Instance.dialogueCoq.SetActive(false);
     }
 }
