@@ -14,6 +14,8 @@ public class GameplayManager : MonoBehaviour
     [SerializeField] private GameObject gameover;
     public Grid grid;
     [SerializeField] private GameObject player;
+
+    [SerializeField] private GameObject canvasPause;
     
 
     
@@ -28,8 +30,8 @@ public class GameplayManager : MonoBehaviour
         {
             Destroy(this);
         }
-
         lastwaypoint = player.transform.position;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -38,6 +40,13 @@ public class GameplayManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             GameOver();
+        }
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            canvasPause.SetActive(true);
+            Time.timeScale = 0;
+            
         }
     }
 
@@ -55,5 +64,19 @@ public class GameplayManager : MonoBehaviour
     public void LoadLevel(string levelname)
     {
         SceneManager.LoadScene(levelname);
+    }
+    
+    public void OnclickPlay()
+    {
+        canvasPause.SetActive(false);
+        Cursor.visible = true;
+        Time.timeScale = 1;
+    }
+
+    public void OnclickMenu()
+    {
+        Cursor.visible = true;
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
     }
 }
