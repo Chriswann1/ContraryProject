@@ -7,14 +7,16 @@ using UnityEngine.UI;
 
 public class GameplayManager : MonoBehaviour
 {
-    
+    public static GameplayManager Instance;
     public Vector2 lastwaypoint;
 
 
     [SerializeField] private GameObject gameover;
     public Grid grid;
     [SerializeField] private GameObject player;
-    public static GameplayManager Instance; 
+    
+
+    
     // Start is called before the first frame update
     void Awake()
     {

@@ -5,6 +5,8 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject chickenrotate;
 
     [SerializeField] private float speed;
+    [SerializeField] private AudioSource audiochicken;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,10 @@ public class Player : MonoBehaviour
         { chickenrotate.transform.rotation = Quaternion.Euler(0,0,180); }
         #endregion
         
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            audiochicken.Play();
+        }
     }
     
 }

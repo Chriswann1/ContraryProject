@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="665e5567-c480-4f61-aa69-16784b1fbd95" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ContraryProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Chicken.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Chicken.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Patrol1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Patrol1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/INDEV/Oscar.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/INDEV/Oscar.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/INDEV/Romain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/INDEV/Romain.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameplayManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameplayManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +22,8 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameplayManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1pnLZGfgGF4LyNst50zaDRnxtaM" />
@@ -32,6 +36,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -66,6 +76,7 @@
       <workItem from="1615822948564" duration="595000" />
       <workItem from="1615881626339" duration="452000" />
       <workItem from="1615884274041" duration="110000" />
+      <workItem from="1615884812890" duration="2446000" />
     </task>
     <servers />
   </component>
