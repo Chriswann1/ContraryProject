@@ -16,7 +16,7 @@ public class Patroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //grid = GamePlayManager.Instance.
+        grid = GameplayManager.Instance.grid;
         position = transform.position;
         target = arraywaypoints[0].transform.position;
     }
@@ -29,7 +29,7 @@ public class Patroller : MonoBehaviour
         if (percent > 1)
         { percent = 1; }
         
-        transform.position = Vector3.Lerp(position, target,percent);
+        //transform.position = Vector3.Lerp(position, target,percent);
         transform.position = Vector3.Lerp(grid.GetCellCenterWorld(grid.WorldToCell(position)), 
             grid.GetCellCenterWorld(grid.WorldToCell(target)),percent);
 
