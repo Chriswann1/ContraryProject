@@ -13,28 +13,22 @@ public class AudioWaypoint : MonoBehaviour
     {
         visited = false;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Chicken" && !visited)
+        if (collision.CompareTag("Chicken") && !visited)
         {
             audioSource.Play();
             visited = true;
-            TestScriptRomain.Instance.txtDialogueCoq.text = txtCoq;
-            StartCoroutine("Dialogue");
+            GameplayManager.Instance.txtDialogueCoq.text = txtCoq;
+            StartCoroutine(Dialogue());
         }
     }
 
     IEnumerator Dialogue()
     {
-        TestScriptRomain.Instance.dialogueCoq.SetActive(true);
+        GameplayManager.Instance.dialogueCoq.SetActive(true);
         yield return new WaitForSeconds(audioSource.time +5);
-        TestScriptRomain.Instance.dialogueCoq.SetActive(false);
+        GameplayManager.Instance.dialogueCoq.SetActive(false);
     }
 }
