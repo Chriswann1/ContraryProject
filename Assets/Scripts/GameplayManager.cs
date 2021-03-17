@@ -11,18 +11,25 @@ public class GameplayManager : MonoBehaviour
     [SerializeField] private GameObject canvasPause;
     [SerializeField] private GameObject canvasGameOver;
     public Grid grid;
-    [SerializeField] private GameObject player;
+    [SerializeField] private Player player;
 
     [SerializeField] private GameObject tomb;
     public TextMeshProUGUI txtDialogueCoq;
     public GameObject dialogueCoq;
     [SerializeField] private SpriteRenderer spriteRend;
     
-    private bool isgameoveron = false;
+    public bool isgameoveron = false;
     private bool ispauseon = false;
-
     public bool inqte = false;
     public bool canMove = true;
+    private bool isendlevel = false;
+
+    private float leveltimesec;
+    private int leveltimemin;
+    [SerializeField] private TextMeshProUGUI timeUItext;
+
+    [SerializeField] private GameObject EndLevelUI;
+    [SerializeField] private TextMeshProUGUI endleveltimeUItext;
 
     
     // Start is called before the first frame update
@@ -43,12 +50,23 @@ public class GameplayManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isendlevel)
+        {
+            leveltimesec = Time.timeSinceLevelLoad - (60*leveltimemin);
+            if (leveltimesec >= 60)
+            {
+                leveltimemin++;
+            }
+
+            timeUItext.text = leveltimemin.ToString()+":"+leveltimesec.ToString("n2");
+        }
+/*
         if (Input.GetKeyDown(KeyCode.P))
         {
             GameOver();
         }
-
-        if (Input.GetButtonDown("Cancel") &&  !isgameoveron && !ispauseon && !inqte)
+*/
+        if (Input.GetButtonDown("Cancel") &&  !isgameoveron && !ispauseon && !inqte && !isendlevel)
         {
             Pause();
         }else if (ispauseon && Input.GetButtonDown("Cancel"))
@@ -68,6 +86,16 @@ public class GameplayManager : MonoBehaviour
         Instantiate(tomb, player.transform.position, player.transform.rotation);
         Time.timeScale = 0;
     }
+
+    public void EndLevel()
+    {
+        isendlevel = true;
+        canMove = false;
+        timeUItext.gameObject.SetActive(false);
+        endleveltimeUItext.text = Mathf.RoundToInt(leveltimemin).ToString()+":"+leveltimesec.ToString("n2");
+        EndLevelUI.SetActive(true);
+        Cursor.visible = true;
+    }
     public void Pause()
     {
         ispauseon = true;
@@ -84,10 +112,16 @@ public class GameplayManager : MonoBehaviour
         Cursor.visible = false;
         isgameoveron = false;
         ispauseon = false;
+        player.stamina = 100f;
     }
-    public void LoadLevel(string levelname)
+
+    public void Backtomenu()
     {
-        SceneManager.LoadScene(levelname);
+        SceneManager.LoadScene(0);
+    }
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         Time.timeScale = 1;
     }
     public void Restart()

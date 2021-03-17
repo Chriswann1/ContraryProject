@@ -2,7 +2,6 @@
 
 public class VictoryExit : MonoBehaviour
 {
-    [SerializeField] private string loadscene;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +18,7 @@ public class VictoryExit : MonoBehaviour
     {
         if (other.CompareTag("Chicken"))
         {
-            GameplayManager.Instance.LoadLevel(loadscene);
+            GameplayManager.Instance.EndLevel();
         }
     }
 }

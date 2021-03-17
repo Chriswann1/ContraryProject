@@ -43,8 +43,18 @@ public class Patroller : MonoBehaviour
             timespend = 0;
         }
         timespend += Time.deltaTime;
+        LookToward(grid.GetCellCenterWorld(grid.WorldToCell(target)));
+        
         #endregion
     }
+
+    private void LookToward(Vector3 target) // the look toward function
+    {
+        Vector3 dir = target - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle-90f, Vector3.forward);
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {

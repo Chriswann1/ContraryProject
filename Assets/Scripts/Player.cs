@@ -1,5 +1,6 @@
 ﻿using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -9,7 +10,10 @@ public class Player : MonoBehaviour
     private float finalspeed;
     [SerializeField] AudioSource audiochicken;
     [SerializeField] GameObject waypointexit;
-    
+    public float stamina = 100f;
+    [SerializeField] private Image staminabar;
+    private bool insprint = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,31 +23,49 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        staminabar.transform.localScale = new Vector3(stamina / 100,1,1);
+        
+        if (!insprint)
+        {
+            stamina += Time.deltaTime * 5f;
+            stamina = Mathf.Clamp(stamina, 0f, 100f);
+            
+        }
+        
         if (GameplayManager.Instance.canMove && !GameplayManager.Instance.inqte)
         {
             #region Move
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
+                insprint = true;
                 finalspeed = basespeed * 2;
+
             }
             else
             {
                 finalspeed = basespeed;
+                insprint = false;
             }
             
             Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
             transform.Translate(input.normalized * Time.deltaTime * finalspeed, 0f);
 
-            if (input.normalized == Vector2.zero)
-            {
-                chickenrotate.transform.rotation = Quaternion.Euler(Vector3.zero);
-            }
-            else
+            if (input.normalized != Vector2.zero)
             {
                 chickenrotate.transform.rotation = Quaternion.Euler(0,0,VectorToAngle(input)-90f);
+                if (insprint) stamina -= Time.deltaTime * 10f;
+
+                if (stamina <= 0f)
+                {
+                    
+                    GameplayManager.Instance.GameOver();
+                    
+                }
+                
             }
+
             #endregion
             
             if (Input.GetKeyDown(KeyCode.C))
