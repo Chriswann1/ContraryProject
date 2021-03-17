@@ -61,7 +61,8 @@ public class Player : MonoBehaviour
                 {
                     
                     GameplayManager.Instance.GameOver();
-                    
+                    stamina = 1f;
+
                 }
                 
             }
