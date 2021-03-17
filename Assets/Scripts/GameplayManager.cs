@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameplayManager : MonoBehaviour
 {
@@ -12,7 +14,8 @@ public class GameplayManager : MonoBehaviour
     [SerializeField] private GameObject player;
 
     [SerializeField] private GameObject tomb;
-
+    public TextMeshProUGUI txtDialogueCoq;
+    public GameObject dialogueCoq;
     [SerializeField] private SpriteRenderer spriteRend;
 
     public bool canMove = true;
