@@ -45,4 +45,12 @@ public class Patroller : MonoBehaviour
         timespend += Time.deltaTime;
         #endregion
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Chicken"))
+        {
+            GameplayManager.Instance.GameOver();
+        }
+    }
 }

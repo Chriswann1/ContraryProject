@@ -9,6 +9,9 @@ public class QTE_Script : MonoBehaviour
 {
     #region variables
 
+    [SerializeField]private AudioClip[] audioClipQte;
+    [SerializeField]private AudioSource audioSources;
+    private int indexAudio;
     private int index = 0;
     [SerializeField]private KeyCode[] thisKey;
     [SerializeField]private Image[] pictures;
@@ -23,10 +26,16 @@ public class QTE_Script : MonoBehaviour
     private bool enableQte = true;
     private bool imgSpawned = false;
 
+    private bool audioPlay = false;
     [SerializeField]private bool qteUsed;
  
     #endregion
-    
+
+    private void Start()
+    {
+        audioSources.clip = audioClipQte[indexAudio];
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -36,6 +45,11 @@ public class QTE_Script : MonoBehaviour
         }
         if (enableQte && !qteUsed)
         {
+            if (!audioPlay)
+            {
+                audioSources.Play();
+                audioPlay = true;
+            }
             QTe();
         }
     }
@@ -67,9 +81,8 @@ public class QTE_Script : MonoBehaviour
                 pictures[index].color = Color.red;
                 qteUsed = true;
                 Invoke("disableUI", 0.4f);
-                
-                Invoke("GameplayManager.Instance.GameOver",0.5f);
-                this.enabled = false;
+
+                StartCoroutine(WaitForDisplayGameOver());
             }
         }
         else
@@ -94,5 +107,12 @@ public class QTE_Script : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
         enableQte = true;
+    }
+
+    IEnumerator WaitForDisplayGameOver()
+    {
+        yield return new WaitForSeconds(1);
+        GameplayManager.Instance.GameOver();
+        this.enabled = false;
     }
 }

@@ -1,22 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Tilemaps;
-using UnityEngine.UI;
 
 public class GameplayManager : MonoBehaviour
 {
     public static GameplayManager Instance;
     public Vector2 lastwaypoint;
-
-
-    [SerializeField] private GameObject gameover;
+    
+    [SerializeField] private GameObject canvasPause;
+    [SerializeField] private GameObject canvasGameOver;
     public Grid grid;
     [SerializeField] private GameObject player;
 
-    [SerializeField] private GameObject canvasPause;
-    
+    [SerializeField] private GameObject tomb;
+
+    [SerializeField] private SpriteRenderer spriteRend;
+
+    public bool canMove = true;
 
     
     // Start is called before the first frame update
@@ -44,47 +43,46 @@ public class GameplayManager : MonoBehaviour
 
         if (Input.GetButtonDown("Cancel"))
         {
-            canvasPause.SetActive(true);
-            Time.timeScale = 0;
-            
+            Pause();
         }
     }
 
     public void GameOver()
     {
-        gameover.SetActive(true);
+        canvasGameOver.SetActive(true);
+        Cursor.visible = true;
+        spriteRend.enabled = false;
+        Instantiate(tomb, player.transform.position, player.transform.rotation);
         Time.timeScale = 0;
     }
-
+    public void Pause()
+    {
+        canvasPause.SetActive(true);
+        Cursor.visible = true;
+        Time.timeScale = 0;
+    }
     public void Retry()
     {
         player.transform.position = lastwaypoint;
-        gameover.SetActive(false);
+        canvasGameOver.SetActive(false);
+        spriteRend.enabled = true;
         Time.timeScale = 1;
+        Cursor.visible = false;
     }
-
     public void LoadLevel(string levelname)
     {
         SceneManager.LoadScene(levelname);
         Time.timeScale = 1;
     }
-
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
-    
     public void OnclickPlay()
     {
         canvasPause.SetActive(false);
         Cursor.visible = true;
         Time.timeScale = 1;
-    }
-
-    public void OnclickMenu()
-    {
-        Cursor.visible = true;
-        Time.timeScale = 1;
-        SceneManager.LoadScene(0);
     }
 }

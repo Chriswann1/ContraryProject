@@ -34,7 +34,7 @@ public class AudioWaypoint : MonoBehaviour
     IEnumerator Dialogue()
     {
         TestScriptRomain.Instance.dialogueCoq.SetActive(true);
-        yield return new WaitForSeconds(audioSource.time);
+        yield return new WaitForSeconds(audioSource.time +5);
         TestScriptRomain.Instance.dialogueCoq.SetActive(false);
     }
 }
