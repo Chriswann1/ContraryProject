@@ -11,8 +11,11 @@ public class GameplayManager : MonoBehaviour
     public Grid grid;
     [SerializeField] private GameObject player;
 
-    
-    
+    [SerializeField] private GameObject tomb;
+
+    [SerializeField] private SpriteRenderer spriteRend;
+
+    public bool canMove = true;
 
     
     // Start is called before the first frame update
@@ -48,6 +51,8 @@ public class GameplayManager : MonoBehaviour
     {
         canvasGameOver.SetActive(true);
         Cursor.visible = true;
+        spriteRend.enabled = false;
+        Instantiate(tomb, player.transform.position, player.transform.rotation);
         Time.timeScale = 0;
     }
     public void Pause()
@@ -60,6 +65,7 @@ public class GameplayManager : MonoBehaviour
     {
         player.transform.position = lastwaypoint;
         canvasGameOver.SetActive(false);
+        spriteRend.enabled = true;
         Time.timeScale = 1;
         Cursor.visible = false;
     }
