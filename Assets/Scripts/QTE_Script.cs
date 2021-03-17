@@ -23,7 +23,7 @@ public class QTE_Script : MonoBehaviour
     private bool goodKey;
     [SerializeField]private float maxTime; 
     private float qteDelay;
-    private bool enableQte = true;
+    private bool enableQte = false;
     private bool imgSpawned = false;
 
     private bool audioPlay = false;
@@ -33,7 +33,7 @@ public class QTE_Script : MonoBehaviour
 
     private void Start()
     {
-        audioSources.clip = audioClipQte[indexAudio];
+        //audioSources.clip = audioClipQte[indexAudio];
     }
 
     // Update is called once per frame
@@ -58,6 +58,7 @@ public class QTE_Script : MonoBehaviour
     {
         if (!imgSpawned)
         {
+            GameplayManager.Instance.inqte = true;
             for (int i = 0; i < pictures.Length; i++)
             {
                 pictures[i].sprite = sprites[i];
@@ -89,6 +90,7 @@ public class QTE_Script : MonoBehaviour
         {
             qteUsed = true;
             Invoke("disableUI", 0.5f);
+            GameplayManager.Instance.inqte = false;
             this.enabled = false;
         }
     }
@@ -106,12 +108,19 @@ public class QTE_Script : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        enableQte = true;
+        if (other.CompareTag("Chicken"))
+        {
+            enableQte = true;
+            
+
+        }
+
     }
 
     IEnumerator WaitForDisplayGameOver()
     {
         yield return new WaitForSeconds(1);
+        GameplayManager.Instance.inqte = false;
         GameplayManager.Instance.GameOver();
         this.enabled = false;
     }

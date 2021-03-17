@@ -4,7 +4,6 @@
     <e p="C:\Users\chris\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
     <e p="C:\Users\chris\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_ContraryProject.-371479582.00" t="ExcludeRecursive" />
     <e p="C:\Users\chris\ContraryProject" t="IncludeRecursive">
-      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Audio" t="Include">
@@ -68,23 +67,6 @@
           </e>
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
-          </e>
-        </e>
-        <e p="UPAToolkit" t="Include">
-          <e p="Editor" t="Include">
-            <e p="EditorGUI" t="Include">
-              <e p="UPAEditorWindow.cs" t="Include" />
-              <e p="UPAExportWindow.cs" t="Include" />
-              <e p="UPAImageCreationWindow.cs" t="Include" />
-              <e p="UPAImageEditorPreview.cs" t="Include" />
-              <e p="UPALayerSettings.cs" t="Include" />
-            </e>
-            <e p="UPABlendModes.cs" t="Include" />
-            <e p="UPACustomTypes.cs" t="Include" />
-            <e p="UPADrawer.cs" t="Include" />
-            <e p="UPAImage.cs" t="Include" />
-            <e p="UPALayer.cs" t="Include" />
-            <e p="UPASession.cs" t="Include" />
           </e>
         </e>
       </e>

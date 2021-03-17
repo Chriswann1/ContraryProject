@@ -17,7 +17,11 @@ public class GameplayManager : MonoBehaviour
     public TextMeshProUGUI txtDialogueCoq;
     public GameObject dialogueCoq;
     [SerializeField] private SpriteRenderer spriteRend;
+    
+    private bool isgameoveron = false;
+    private bool ispauseon = false;
 
+    public bool inqte = false;
     public bool canMove = true;
 
     
@@ -44,14 +48,20 @@ public class GameplayManager : MonoBehaviour
             GameOver();
         }
 
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel") &&  !isgameoveron && !ispauseon && !inqte)
         {
             Pause();
+        }else if (ispauseon && Input.GetButtonDown("Cancel"))
+        {
+            OnclickPlay();
         }
+        
+        
     }
 
     public void GameOver()
     {
+        isgameoveron = true;
         canvasGameOver.SetActive(true);
         Cursor.visible = true;
         spriteRend.enabled = false;
@@ -60,6 +70,7 @@ public class GameplayManager : MonoBehaviour
     }
     public void Pause()
     {
+        ispauseon = true;
         canvasPause.SetActive(true);
         Cursor.visible = true;
         Time.timeScale = 0;
@@ -71,6 +82,8 @@ public class GameplayManager : MonoBehaviour
         spriteRend.enabled = true;
         Time.timeScale = 1;
         Cursor.visible = false;
+        isgameoveron = false;
+        ispauseon = false;
     }
     public void LoadLevel(string levelname)
     {
@@ -85,7 +98,9 @@ public class GameplayManager : MonoBehaviour
     public void OnclickPlay()
     {
         canvasPause.SetActive(false);
-        Cursor.visible = true;
+        Cursor.visible = false;
         Time.timeScale = 1;
+        ispauseon = false;
+
     }
 }

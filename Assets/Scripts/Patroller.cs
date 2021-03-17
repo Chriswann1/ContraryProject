@@ -46,7 +46,7 @@ public class Patroller : MonoBehaviour
         #endregion
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Chicken"))
         {
