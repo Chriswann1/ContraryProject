@@ -19,6 +19,11 @@
           </e>
           <e p="README.txt" t="Include" />
         </e>
+        <e p="Font" t="Include">
+          <e p="dogica_license.txt" t="Include" />
+          <e p="dogica_pixel_license.txt" t="Include" />
+          <e p="info.txt" t="Include" />
+        </e>
         <e p="Prefab" t="Include">
           <e p="README.txt" t="Include" />
         </e>

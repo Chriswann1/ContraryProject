@@ -81,9 +81,8 @@ public class QTE_Script : MonoBehaviour
                 pictures[index].color = Color.red;
                 qteUsed = true;
                 Invoke("disableUI", 0.4f);
-                
-                Invoke("GameplayManager.Instance.GameOver",0.5f);
-                this.enabled = false;
+
+                StartCoroutine(WaitForDisplayGameOver());
             }
         }
         else
@@ -108,5 +107,12 @@ public class QTE_Script : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
         enableQte = true;
+    }
+
+    IEnumerator WaitForDisplayGameOver()
+    {
+        yield return new WaitForSeconds(1);
+        GameplayManager.Instance.GameOver();
+        this.enabled = false;
     }
 }
