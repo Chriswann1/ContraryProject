@@ -224,6 +224,7 @@ MonoBehaviour:
   canvasGameOver: {fileID: 1127304848}
   grid: {fileID: 1026853739}
   player: {fileID: 1353955204}
+  tomb: {fileID: 5482495692301529092, guid: b17e2bb463f1efa4baf8666d913d2970, type: 3}
 --- !u!4 &15601775
 Transform:
   m_ObjectHideFlags: 0
