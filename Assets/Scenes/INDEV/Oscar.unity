@@ -472,6 +472,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a62933e1ccbeb474ab23ceb3dbe780ad, type: 3}
+--- !u!1 &704612624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2871958780824335547, guid: 977f3237e898b5446a7958f1c86ce317,
+    type: 3}
+  m_PrefabInstance: {fileID: 2871958780166716843}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &832285149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -878,6 +884,80 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &2871958780166716843
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2871958780824335546, guid: 977f3237e898b5446a7958f1c86ce317,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871958780824335546, guid: 977f3237e898b5446a7958f1c86ce317,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871958780824335546, guid: 977f3237e898b5446a7958f1c86ce317,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871958780824335546, guid: 977f3237e898b5446a7958f1c86ce317,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871958780824335546, guid: 977f3237e898b5446a7958f1c86ce317,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871958780824335546, guid: 977f3237e898b5446a7958f1c86ce317,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871958780824335546, guid: 977f3237e898b5446a7958f1c86ce317,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871958780824335546, guid: 977f3237e898b5446a7958f1c86ce317,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871958780824335546, guid: 977f3237e898b5446a7958f1c86ce317,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871958780824335546, guid: 977f3237e898b5446a7958f1c86ce317,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871958780824335546, guid: 977f3237e898b5446a7958f1c86ce317,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871958780824335547, guid: 977f3237e898b5446a7958f1c86ce317,
+        type: 3}
+      propertyPath: m_Name
+      value: WaypointExit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760012930326644512, guid: 977f3237e898b5446a7958f1c86ce317,
+        type: 3}
+      propertyPath: loadscene
+      value: Level1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 977f3237e898b5446a7958f1c86ce317, type: 3}
 --- !u!1001 &5578363924367330924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -885,6 +965,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5332121507129071896, guid: 50ae1333af1be8a448bd0e676ad93318,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5578363924972847089, guid: 50ae1333af1be8a448bd0e676ad93318,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -955,5 +1040,10 @@ PrefabInstance:
       propertyPath: audiochicken
       value: 
       objectReference: {fileID: 2097122420}
+    - target: {fileID: 5578363924972847095, guid: 50ae1333af1be8a448bd0e676ad93318,
+        type: 3}
+      propertyPath: waypointexit
+      value: 
+      objectReference: {fileID: 704612624}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50ae1333af1be8a448bd0e676ad93318, type: 3}

@@ -28,6 +28,7 @@
           <e p="QTE_Script.cs" t="Include" />
           <e p="README.txt" t="Include" />
           <e p="TestScriptRomain.cs" t="Include" />
+          <e p="VictoryExit.cs" t="Include" />
           <e p="Waypoint.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">

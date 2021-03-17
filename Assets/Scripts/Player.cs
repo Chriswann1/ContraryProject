@@ -5,7 +5,8 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject chickenrotate;
 
     [SerializeField] private float speed;
-    [SerializeField] private AudioSource audiochicken;
+    [SerializeField] AudioSource audiochicken;
+    [SerializeField] GameObject waypointexit;
     
     // Start is called before the first frame update
     void Start()
@@ -33,8 +34,15 @@ public class Player : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.C))
         {
+            if (waypointexit.transform.position.x - transform.position.x > 0)
+            {
+                audiochicken.panStereo = 1;
+            }
+            else
+            {
+                audiochicken.panStereo = -1;
+            }
             audiochicken.Play();
         }
     }
-    
 }
