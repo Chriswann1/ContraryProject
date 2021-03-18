@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 7348597837879957627}
   - component: {fileID: 7348597837879957629}
   - component: {fileID: 7348597837879957628}
+  - component: {fileID: 3117427771277815910}
   m_Layer: 5
   m_Name: Qte1 (4)
   m_TagString: Untagged
@@ -297,6 +298,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3117427771277815910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348597837879957626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &7348597837890771502
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +322,7 @@ GameObject:
   - component: {fileID: 7348597837890771503}
   - component: {fileID: 7348597837890771489}
   - component: {fileID: 7348597837890771488}
+  - component: {fileID: 5552774895212386505}
   m_Layer: 5
   m_Name: Qte1 (2)
   m_TagString: Untagged
@@ -372,6 +387,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5552774895212386505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348597837890771502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &7348597837921201847
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +545,7 @@ GameObject:
   - component: {fileID: 7348597837941713396}
   - component: {fileID: 7348597837941713398}
   - component: {fileID: 7348597837941713397}
+  - component: {fileID: 6200233286119265087}
   m_Layer: 5
   m_Name: Qte1 (3)
   m_TagString: Untagged
@@ -581,6 +610,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6200233286119265087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348597837941713395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &7348597838187023789
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,6 +669,7 @@ GameObject:
   - component: {fileID: 7348597838922773230}
   - component: {fileID: 7348597838922773216}
   - component: {fileID: 7348597838922773231}
+  - component: {fileID: 740330757933469082}
   m_Layer: 5
   m_Name: Qte1 (1)
   m_TagString: Untagged
@@ -691,6 +734,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &740330757933469082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348597838922773229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &8528065016056680234
 GameObject:
   m_ObjectHideFlags: 0
