@@ -23,7 +23,7 @@
           <e p="Patroller.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="QTE_Script.cs" t="Include" />
-          <e p="TestScriptRomain.cs" t="Include" />
+          <e p="Trap.cs" t="Include" />
           <e p="VictoryExit.cs" t="Include" />
           <e p="Waypoint.cs" t="Include" />
         </e>
