@@ -38,6 +38,10 @@ public class GameplayManager : MonoBehaviour
     private float timespend;
     private float speed = 2f;
 
+    [SerializeField] AudioSource chickenSource;
+    [SerializeField] AudioClip[] deathsongs;
+    [SerializeField] AudioClip[] respawnsongs;
+
     
     // Start is called before the first frame update
     void Awake()
@@ -93,6 +97,7 @@ public class GameplayManager : MonoBehaviour
                 canMove = true;
                 timespend = 0;
                 boolretry = false;
+                chickenSource.clip = respawnsongs[Random.Range(0, respawnsongs.Length)];
             }
             timespend += Time.deltaTime;
         }
@@ -100,6 +105,7 @@ public class GameplayManager : MonoBehaviour
 
     public void GameOver()
     {
+        chickenSource.clip = deathsongs[Random.Range(0, deathsongs.Length)];
         isgameoveron = true;
         canvasGameOver.SetActive(true);
         Cursor.visible = true;
