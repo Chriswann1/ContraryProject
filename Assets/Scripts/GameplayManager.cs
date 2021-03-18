@@ -95,6 +95,10 @@ public class GameplayManager : MonoBehaviour
         endleveltimeUItext.text = Mathf.RoundToInt(leveltimemin).ToString()+":"+leveltimesec.ToString("n2");
         EndLevelUI.SetActive(true);
         Cursor.visible = true;
+        if (PlayerPrefs.GetInt("Level")<=SceneManager.GetActiveScene().buildIndex)
+        {
+            PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex+1);
+        }
     }
     public void Pause()
     {
