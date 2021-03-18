@@ -98,6 +98,7 @@ public class GameplayManager : MonoBehaviour
                 timespend = 0;
                 boolretry = false;
                 chickenSource.clip = respawnsongs[Random.Range(0, respawnsongs.Length)];
+                chickenSource.Play();
             }
             timespend += Time.deltaTime;
         }
@@ -106,6 +107,7 @@ public class GameplayManager : MonoBehaviour
     public void GameOver()
     {
         chickenSource.clip = deathsongs[Random.Range(0, deathsongs.Length)];
+        chickenSource.Play();
         isgameoveron = true;
         canvasGameOver.SetActive(true);
         Cursor.visible = true;
