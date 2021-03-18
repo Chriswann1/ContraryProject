@@ -29,7 +29,7 @@ public class QTE_Script : MonoBehaviour
 
     private bool audioPlay = false;
     [SerializeField]private bool qteUsed;
-
+    [SerializeField]private Animator LinkedDoor;
     private float timeavailable;
 
     #endregion
@@ -71,6 +71,8 @@ public class QTE_Script : MonoBehaviour
             for (int i = 0; i < pictures.Length; i++)
             {
                 pictures[i].sprite = sprites[i];
+                pictures[i].color = Color.white;;
+                spritesmask[i].transform.localPosition = new Vector3(0, -100, 0);
                 pictures[i].gameObject.SetActive(true);
                 qteDelay = Time.time + maxTime;
             }
@@ -80,7 +82,7 @@ public class QTE_Script : MonoBehaviour
 
         if (index<pictures.Length)
         {
-            spritesmask[index].transform.localPosition = new Vector3(0, ((timeavailable - 0f) / (maxTime - 0)) * (-100 - 0) + (0), 0);
+            spritesmask[index].transform.localPosition = new Vector3(0, (timeavailable / maxTime) * (-100), 0);
             if (Input.GetKeyDown(thisKey[index]))
             {
                 pictures[index].color = Color.green;
@@ -101,6 +103,10 @@ public class QTE_Script : MonoBehaviour
             qteUsed = true;
             Invoke("disableUI", 0.5f);
             GameplayManager.Instance.inqte = false;
+            if (LinkedDoor != null)
+            {
+                LinkedDoor.SetBool("isOpen", true);
+            }
             this.enabled = false;
         }
     }
@@ -116,7 +122,7 @@ public class QTE_Script : MonoBehaviour
         imgSpawned = false;
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Chicken"))
         {
