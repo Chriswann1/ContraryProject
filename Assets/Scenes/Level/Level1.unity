@@ -16584,8 +16584,13 @@ PrefabInstance:
     - target: {fileID: 6824527025178991751, guid: 96f153467aa621949aac0d280771f3cf,
         type: 3}
       propertyPath: txtCoq
-      value: "Va \xE0 droite !"
+      value: a droite !
       objectReference: {fileID: 0}
+    - target: {fileID: 6824527025178991751, guid: 96f153467aa621949aac0d280771f3cf,
+        type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 92ce50fb1e8fe134db72587ac4d0a1a8, type: 3}
     - target: {fileID: 6824527025178991752, guid: 96f153467aa621949aac0d280771f3cf,
         type: 3}
       propertyPath: m_LocalPosition.x
