@@ -25,6 +25,7 @@ public class QTE_Script : MonoBehaviour
     private bool enableQte = false;
     private bool imgSpawned = false;
 
+    [SerializeField] private bool closeddoordefault = false;
     [SerializeField]private bool qteUsed;
     [SerializeField]private Animator LinkedDoor;
     private float timeavailable;
@@ -33,6 +34,11 @@ public class QTE_Script : MonoBehaviour
 
     private void Start()
     {
+        if (closeddoordefault && LinkedDoor != null)
+        {
+            LinkedDoor.SetBool("isOpen", false);
+        }
+        
         spritesmask = new Transform[pictures.Length];
         for (int i = 0; i < spritesmask.Length; i++)
         {
