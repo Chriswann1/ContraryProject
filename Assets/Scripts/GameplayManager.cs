@@ -122,6 +122,7 @@ public class GameplayManager : MonoBehaviour
     public void Backtomenu()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1;
     }
     public void NextLevel()
     {

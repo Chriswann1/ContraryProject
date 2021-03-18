@@ -16,6 +16,7 @@ public class QTE_Script : MonoBehaviour
     [SerializeField]private KeyCode[] thisKey;
     [SerializeField]private Image[] pictures;
     [SerializeField]private Sprite[] sprites;
+    private Transform[] spritesmask; 
     public GameObject qteUI;
     
     public TextMeshProUGUI timeTxt;
@@ -28,20 +29,28 @@ public class QTE_Script : MonoBehaviour
 
     private bool audioPlay = false;
     [SerializeField]private bool qteUsed;
- 
+
+    private float timeavailable;
+
     #endregion
 
     private void Start()
     {
+        spritesmask = new Transform[pictures.Length];
+        for (int i = 0; i < spritesmask.Length; i++)
+        {
+            spritesmask[i] = pictures[i].transform.GetChild(0);
+        }
         //audioSources.clip = audioClipQte[indexAudio];
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (qteDelay-Time.time > 0)
+        timeavailable = qteDelay - Time.time;
+        if (timeavailable > 0)
         {
-            timeTxt.text = (qteDelay-Time.time).ToString("n2");
+            timeTxt.text = timeavailable.ToString("n2");
         }
         if (enableQte && !qteUsed)
         {
@@ -71,6 +80,7 @@ public class QTE_Script : MonoBehaviour
 
         if (index<pictures.Length)
         {
+            spritesmask[index].transform.localPosition = new Vector3(0, ((timeavailable - 0f) / (maxTime - 0)) * (-100 - 0) + (0), 0);
             if (Input.GetKeyDown(thisKey[index]))
             {
                 pictures[index].color = Color.green;
