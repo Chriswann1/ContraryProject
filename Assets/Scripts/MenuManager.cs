@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
+
+    public GameObject panelCredits;
     public static MenuManager Instance;
     public Button[] levelsButtons;
 
@@ -14,6 +17,19 @@ public class MenuManager : MonoBehaviour
         {
             levelsButtons[i].interactable = true;
         }
+    }
+
+    public void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            panelCredits.SetActive(false);
+        }
+    }
+
+    public void OnClickShowCredits()
+    {
+        panelCredits.SetActive(true);
     }
     public void Onclick_Exit()
     {

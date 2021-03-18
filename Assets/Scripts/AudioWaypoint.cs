@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AudioWaypoint : MonoBehaviour
 {
+    [SerializeField] private AudioClip clip;
     [SerializeField] AudioSource audioSource;
     bool visited;
     [SerializeField] string txtCoq;
@@ -18,6 +19,7 @@ public class AudioWaypoint : MonoBehaviour
     {
         if (collision.CompareTag("Chicken") && !visited)
         {
+            audioSource.clip = clip;
             audioSource.Play();
             visited = true;
             GameplayManager.Instance.txtDialogueCoq.text = txtCoq;
