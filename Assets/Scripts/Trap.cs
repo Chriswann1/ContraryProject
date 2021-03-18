@@ -6,42 +6,44 @@ public class Trap : MonoBehaviour
 {
     [SerializeField] private Animator animator;
 
-    public bool open = false;
-    int openHash;
-    [SerializeField] bool killplayer = false;
 
-    [SerializeField] BoxCollider2D collider;
+    [SerializeField] bool killplayer = false;
+    private bool used = false;
+    
+
 
     // Start is called before the first frame update
     void Start()
     {
-        openHash = Animator.StringToHash("Open");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool(openHash, open);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Chicken"))
+        if (collision.CompareTag("Chicken") && !used)
         {
             Debug.Log("Chicken est passé");
-            open = true;
-            collider.enabled = true;
+            animator.SetBool("isOpen", false);
+
 
             if (killplayer)
             {
-                Death();
+                StartCoroutine(Death());
             }
+
+            used = true;
         }
     }
 
     IEnumerator Death()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2f);
         GameplayManager.Instance.GameOver();
     }
 }
