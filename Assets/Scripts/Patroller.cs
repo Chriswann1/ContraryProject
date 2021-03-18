@@ -29,7 +29,6 @@ public class Patroller : MonoBehaviour
         if (percent > 1)
         { percent = 1; }
         
-        //transform.position = Vector3.Lerp(position, target,percent);
         transform.position = Vector3.Lerp(grid.GetCellCenterWorld(grid.WorldToCell(position)), 
             grid.GetCellCenterWorld(grid.WorldToCell(target)),percent);
 

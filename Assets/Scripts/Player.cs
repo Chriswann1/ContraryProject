@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject waypointexit;
     public float stamina = 100f;
     [SerializeField] private Image staminabar;
-    private bool insprint = false;
+    private bool insprint;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         staminabar.transform.localScale = new Vector3(stamina / 100,1,1);
-        
+        if (!GameplayManager.Instance.canMove)
+        {
+            return;
+        }
         if (!insprint)
         {
             stamina += Time.deltaTime * 5f;
