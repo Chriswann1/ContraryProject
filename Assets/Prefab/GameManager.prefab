@@ -58,3 +58,6 @@ MonoBehaviour:
   timeUItext: {fileID: 0}
   EndLevelUI: {fileID: 0}
   endleveltimeUItext: {fileID: 0}
+  chickenSource: {fileID: 0}
+  deathsongs: []
+  respawnsongs: []
