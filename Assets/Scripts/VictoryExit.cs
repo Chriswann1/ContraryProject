@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VictoryExit : MonoBehaviour
 {
@@ -18,7 +19,14 @@ public class VictoryExit : MonoBehaviour
     {
         if (other.CompareTag("Chicken"))
         {
-            GameplayManager.Instance.EndLevel();
+            if (SceneManager.GetActiveScene().name == "Level3")
+            {
+                GameplayManager.Instance.Victory();
+            }
+            else
+            {
+                GameplayManager.Instance.EndLevel();
+            }
         }
     }
 }

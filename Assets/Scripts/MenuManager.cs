@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.Video;
 
 public class MenuManager : MonoBehaviour
 {
@@ -9,8 +8,6 @@ public class MenuManager : MonoBehaviour
     public GameObject panelCredits;
     public static MenuManager Instance;
     public Button[] levelsButtons;
-    [SerializeField] private VideoPlayer splashscreen;
-    [SerializeField] private GameObject canvas;
 
     public void OnClickLevel(int level)
     {
@@ -31,11 +28,6 @@ public class MenuManager : MonoBehaviour
         if (Input.GetKey(KeyCode.Escape))
         {
             panelCredits.SetActive(false);
-        }
-
-        if (splashscreen.length <= Time.time)
-        {
-            canvas.SetActive(true);
         }
     }
 
