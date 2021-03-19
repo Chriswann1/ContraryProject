@@ -20726,6 +20726,16 @@ PrefabInstance:
       propertyPath: LinkedDoor
       value: 
       objectReference: {fileID: 2113004786}
+    - target: {fileID: 388388267621285525, guid: 52ffc34d6561aff42884fe1c4e66bd50,
+        type: 3}
+      propertyPath: qteUsed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 388388267621285525, guid: 52ffc34d6561aff42884fe1c4e66bd50,
+        type: 3}
+      propertyPath: reusableiffail
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7047840224447038942, guid: 52ffc34d6561aff42884fe1c4e66bd50,
         type: 3}
       propertyPath: m_Name
