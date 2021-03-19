@@ -71,4 +71,20 @@ public class MenuManager : MonoBehaviour
     {
         panelCredits.SetActive(false);
     }
+
+    public void resetprogression()
+    {
+        for (int i = 1; i < levelsButtons.Length; i++)
+        {
+            levelsButtons[i].interactable = false;
+        }
+        PlayerPrefs.SetInt("Level", 1);
+        
+        for (int i = 1; i < PlayerPrefs.GetInt("Level"); i++)
+        {
+            Debug.Log(PlayerPrefs.GetInt("Level"));
+            levelsButtons[i].interactable = true;
+        }
+
+    }
 }
