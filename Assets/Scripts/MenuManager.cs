@@ -19,18 +19,20 @@ public class MenuManager : MonoBehaviour
 
     public void Start()
     {
-        for (int i = 0; i < levelsButtons.Length; i++)
+        for (int i = 1; i < levelsButtons.Length; i++)
         {
             levelsButtons[i].interactable = false;
         }
-        
+
+    
         if (!PlayerPrefs.HasKey("Level"))
         {
-            PlayerPrefs.SetInt("Level", 3);
+            PlayerPrefs.SetInt("Level", 1);
         }
         
-        for (int i = 0; i < PlayerPrefs.GetInt("Level")-2; i++)
+        for (int i = 1; i < PlayerPrefs.GetInt("Level"); i++)
         {
+            Debug.Log(PlayerPrefs.GetInt("Level"));
             levelsButtons[i].interactable = true;
         }
     }
