@@ -116,6 +116,22 @@ public class GameplayManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    public void Victory()
+    {
+        isendlevel = true;
+        canMove = false;
+        timeUItext.gameObject.SetActive(false);
+        endleveltimeUItext.text = Mathf.RoundToInt(leveltimemin).ToString()+":"+leveltimesec.ToString("n2");
+        EndLevelUI.SetActive(true);
+        EndLevelUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Nuggets Lives \nMatter \n Game Finished !";
+        EndLevelUI.transform.GetChild(1).gameObject.SetActive(false);
+        Cursor.visible = true;
+        if (PlayerPrefs.GetInt("Level")<=SceneManager.GetActiveScene().buildIndex)
+        {
+            PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex+1);
+        }
+    }
+
     public void EndLevel()
     {
         isendlevel = true;

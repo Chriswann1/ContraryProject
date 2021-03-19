@@ -24,7 +24,8 @@ public class QTE_Script : MonoBehaviour
     private float qteDelay;
     private bool enableQte = false;
     private bool imgSpawned = false;
-
+    [SerializeField] private bool reusableiffail = false;
+    [SerializeField] private bool killiffail = true;
     [SerializeField] private bool closeddoordefault = false;
     [SerializeField]private bool qteUsed;
     [SerializeField]private Animator LinkedDoor;
@@ -90,9 +91,12 @@ public class QTE_Script : MonoBehaviour
             else if (Input.anyKeyDown && !Input.GetKeyDown(thisKey[index]) || Time.time>qteDelay){
                 Debug.Log("BadKey");
                 pictures[index].color = Color.red;
+
                 qteUsed = true;
+                
                 Invoke("disableUI", 0.4f);
 
+                //GameplayManager.Instance.canMove = false;
                 StartCoroutine(WaitForDisplayGameOver());
             }
         }
@@ -111,6 +115,8 @@ public class QTE_Script : MonoBehaviour
 
     void disableUI()
     {
+        enableQte = false;
+        index = 0;
         for (int i = 0; i < pictures.Length; i++)
         {
             pictures[i].gameObject.SetActive(true);
@@ -135,7 +141,22 @@ public class QTE_Script : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         GameplayManager.Instance.inqte = false;
-        GameplayManager.Instance.GameOver();
-        this.enabled = false;
+        if (killiffail)
+        {
+            GameplayManager.Instance.GameOver();
+        }
+
+
+        
+        if (!reusableiffail)
+        {
+            this.enabled = false;
+            
+        }
+        else
+        {
+            qteUsed = false;
+        }
+
     }
 }
