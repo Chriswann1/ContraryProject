@@ -563,6 +563,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1196305571}
     m_Modifications:
+    - target: {fileID: 812038332, guid: 9ebeeda8e9743ca45ad1e02585823d5b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1881263780}
+    - target: {fileID: 812038332, guid: 9ebeeda8e9743ca45ad1e02585823d5b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_volume
+      objectReference: {fileID: 0}
     - target: {fileID: 4601755080615051097, guid: 9ebeeda8e9743ca45ad1e02585823d5b,
         type: 3}
       propertyPath: m_Name
@@ -121104,6 +121112,12 @@ MonoBehaviour:
 --- !u!82 &1881263779 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 5332121507129071896, guid: 50ae1333af1be8a448bd0e676ad93318,
+    type: 3}
+  m_PrefabInstance: {fileID: 1881263776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1881263780 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3977888756976691278, guid: 50ae1333af1be8a448bd0e676ad93318,
     type: 3}
   m_PrefabInstance: {fileID: 1881263776}
   m_PrefabAsset: {fileID: 0}

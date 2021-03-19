@@ -1291,6 +1291,12 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 178240951}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &178240955 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3977888756976691278, guid: 50ae1333af1be8a448bd0e676ad93318,
+    type: 3}
+  m_PrefabInstance: {fileID: 178240951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &179049343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5622,6 +5628,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOverUI
       objectReference: {fileID: 0}
+    - target: {fileID: 2580844394528618902, guid: ccb732e128546a749b43d63054112a8d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2580844394528618903, guid: ccb732e128546a749b43d63054112a8d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6383,6 +6394,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1725930132}
     m_Modifications:
+    - target: {fileID: 812038332, guid: 9ebeeda8e9743ca45ad1e02585823d5b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 178240955}
+    - target: {fileID: 812038332, guid: 9ebeeda8e9743ca45ad1e02585823d5b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_volume
+      objectReference: {fileID: 0}
     - target: {fileID: 4601755080615051097, guid: 9ebeeda8e9743ca45ad1e02585823d5b,
         type: 3}
       propertyPath: m_Name
