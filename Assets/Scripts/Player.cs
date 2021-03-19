@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float basespeed;
     private float finalspeed;
     [SerializeField] AudioSource audiochicken;
+    [SerializeField] AudioClip chickenclip;
     [SerializeField] GameObject waypointexit;
     public float stamina = 100f;
     [SerializeField] private Image staminabar;
@@ -74,7 +75,7 @@ public class Player : MonoBehaviour
             
             if (Input.GetKeyDown(KeyCode.C))
             {
-
+                audiochicken.clip = chickenclip;
                 audiochicken.panStereo =  -(transform.position.x - waypointexit.transform.position.x)  / 20;
                 audiochicken.Play();
             }
