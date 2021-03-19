@@ -126,10 +126,6 @@ public class GameplayManager : MonoBehaviour
         EndLevelUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Nuggets Lives \nMatter \n Game Finished !";
         EndLevelUI.transform.GetChild(1).gameObject.SetActive(false);
         Cursor.visible = true;
-        if (PlayerPrefs.GetInt("Level")<=SceneManager.GetActiveScene().buildIndex)
-        {
-            PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex+1);
-        }
     }
 
     public void EndLevel()

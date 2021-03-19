@@ -13,6 +13,7 @@ public class MenuManager : MonoBehaviour
 
     public void OnClickLevel(int level)
     {
+        Debug.Log("scène demandé : " + level);
         SceneManager.LoadScene(level);
 
     }
