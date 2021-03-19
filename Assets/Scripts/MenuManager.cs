@@ -12,7 +12,7 @@ public class MenuManager : MonoBehaviour
     public void OnClickLevel(int level)
     {
         SceneManager.LoadScene(level);
-        for (int i = 0; i < PlayerPrefs.GetInt("Level")-1; i++)
+        for (int i = 0; i < PlayerPrefs.GetInt("Level")-2; i++)
         {
             levelsButtons[i].interactable = true;
         }
