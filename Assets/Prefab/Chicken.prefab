@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chickenrotate: {fileID: 5578363925759575074}
-  basespeed: 0
+  basespeed: 1.5
   audiochicken: {fileID: 5332121507129071896}
   chickenclip: {fileID: 8300000, guid: e7c630c4964b0e0439d89794077a7703, type: 3}
   waypointexit: {fileID: 0}

@@ -6394,6 +6394,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1725930132}
     m_Modifications:
+    - target: {fileID: 348935915, guid: 9ebeeda8e9743ca45ad1e02585823d5b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 348935915, guid: 9ebeeda8e9743ca45ad1e02585823d5b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 812038332, guid: 9ebeeda8e9743ca45ad1e02585823d5b, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6402,10 +6410,37 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: set_volume
       objectReference: {fileID: 0}
+    - target: {fileID: 1610155924, guid: 9ebeeda8e9743ca45ad1e02585823d5b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610155924, guid: 9ebeeda8e9743ca45ad1e02585823d5b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610155924, guid: 9ebeeda8e9743ca45ad1e02585823d5b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867370263757917333, guid: 9ebeeda8e9743ca45ad1e02585823d5b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 31239163}
+    - target: {fileID: 2867370263757917333, guid: 9ebeeda8e9743ca45ad1e02585823d5b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Retry
+      objectReference: {fileID: 0}
     - target: {fileID: 4601755080615051097, guid: 9ebeeda8e9743ca45ad1e02585823d5b,
         type: 3}
       propertyPath: m_Name
       value: PauseUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601755080615051097, guid: 9ebeeda8e9743ca45ad1e02585823d5b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4601755080657679123, guid: 9ebeeda8e9743ca45ad1e02585823d5b,
         type: 3}
