@@ -18,11 +18,11 @@ public class GameplayManager : MonoBehaviour
     public GameObject dialogueCoq;
     [SerializeField] private SpriteRenderer spriteRend;
     
-    public bool isgameoveron = false;
-    private bool ispauseon = false;
-    public bool inqte = false;
+    public bool isgameoveron;
+    private bool ispauseon;
+    public bool inqte;
     public bool canMove = true;
-    private bool isendlevel = false;
+    private bool isendlevel;
 
     private float leveltimesec;
     private int leveltimemin;
@@ -36,7 +36,7 @@ public class GameplayManager : MonoBehaviour
     private Vector3 playerpos;
     private bool boolretry;
     private float timespend;
-    private float speed = 2f;
+    private float speed = 3.5f;
 
     [SerializeField] AudioSource chickenSource;
     [SerializeField] AudioClip[] deathsongs;
