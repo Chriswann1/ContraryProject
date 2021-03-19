@@ -118726,6 +118726,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8364efd793783964ca002ba4dbe06aa2,
         type: 3}
+    - target: {fileID: 914548381090424418, guid: f09fbb5db7733a34f9fdbae4108178bf,
+        type: 3}
+      propertyPath: reusableiffail
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 914548381090424419, guid: f09fbb5db7733a34f9fdbae4108178bf,
         type: 3}
       propertyPath: killplayer
